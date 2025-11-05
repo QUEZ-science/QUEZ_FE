@@ -1,11 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes, Router, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Home from '@/Page/Home';
 
-const App: React.FC = ()=>{
-  return(
+const App: React.FC = () => {
+  return (
     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default App;

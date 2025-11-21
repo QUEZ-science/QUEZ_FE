@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <_.Container>
       <Header />
-      <p>ㄹㄹ</p>
+      <_.Main></_.Main>
     </_.Container>
   );
 };

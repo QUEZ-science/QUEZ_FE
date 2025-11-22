@@ -7,7 +7,10 @@ export const Container = styled.div<{ type: string }>`
   align-items: center;
   border-radius: 0.5rem;
   cursor: pointer;
-  ${(props) => props.type == 'blue' && `background-color: #EBF1FF;`};
+  ${(props) =>
+    props.type == 'blue'
+      ? `background-color: #EBF1FF;`
+      : `background-color: #E2E7F0;`};
   &:hover {
     filter: brightness(0.9);
   }
@@ -19,5 +22,5 @@ export const Content = styled.p<{ type: string }>`
   font-weight: 600;
   line-height: normal;
   margin: 0;
-  ${(props) => props.type == 'blue' && `color: #2962F6;`};
+  ${(props) => (props.type == 'blue' ? `color: #2962F6;` : `color:#4A5468`)};
 `;

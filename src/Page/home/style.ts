@@ -16,7 +16,7 @@ export const Main = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const QuizArea = styled.div`
+export const QuizAreaGrid = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;

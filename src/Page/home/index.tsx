@@ -2,13 +2,14 @@ import * as _ from './style';
 import Header from '@/components/header';
 import QuizBlock from '@/components/quizBlock';
 import ScoreChart from '@/components/scoreChart';
+import DailyQuiz from '@/components/dailyQuiz';
 
 const Home = () => {
   return (
     <_.Container>
       <Header />
       <_.Main>
-        <_.QuizArea>
+        <_.QuizAreaGrid>
           <QuizBlock
             color="blue"
             name="퀴즈풀기"
@@ -30,8 +31,11 @@ const Home = () => {
 현재 이용 불가능합니다."
             active={false}
           />
-        </_.QuizArea>
-        <ScoreChart />
+        </_.QuizAreaGrid>
+        <_.QuizAreaGrid>
+          <ScoreChart />
+          <DailyQuiz />
+        </_.QuizAreaGrid>
       </_.Main>
     </_.Container>
   );

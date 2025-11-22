@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   display: flex;
-  padding: 32px;
+  padding: 28px;
   width: 288px;
   flex-direction: column;
   align-items: flex-end;
-  gap: 20px;
+  gap: 12px;
   border-radius: 12px;
   background: #fff;
 `;
@@ -14,7 +14,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 14px;
+  gap: 10px;
 `;
 export const header = styled.div`
   display: flex;

@@ -18,7 +18,7 @@ const Lanking = () => {
       <_.UserLangking user={true}>
         <_.UserDiv>
           <_.LangkingNum>1</_.LangkingNum>
-          <_.UserName>박하린</_.UserName>
+          <_.UserName>사용자</_.UserName>
         </_.UserDiv>
         <_.Score>99999점</_.Score>
       </_.UserLangking>

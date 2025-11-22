@@ -23,7 +23,7 @@ export const UserDiv = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
-  padding: 4px;
+  padding: 2px;
 `;
 export const LangkingNum = styled.h3`
   color: #2962f6;

@@ -27,7 +27,7 @@ const Home = () => {
           />
           <QuizBlock
             color="blue"
-            name="퀴즈배틀"
+            name="퀴즈생성"
             body="추후 개발 될 기능입니다.
 현재 이용 불가능합니다."
             active={false}

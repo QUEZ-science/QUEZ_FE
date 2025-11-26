@@ -24,12 +24,8 @@ export const QuizTitleDiv = styled.div`
   font-weight: 700;
   line-height: normal;
 `;
-export const QuizBlueText = styled.h3`
-  color: #2962f6;
-  margin: 0;
-`;
-export const QuizBlackText = styled.h3`
-  color: #1a202c;
+export const QuizText = styled.h3<{ color: string }>`
+  ${(props) => (props.color == 'blue' ? `color: #2962f6;` : `color: #1a202c;`)}
   margin: 0;
 `;
 export const ContentArea = styled.div`
@@ -78,6 +74,37 @@ export const answerInput = styled.input`
   :focus {
     border: #2962f6;
   }
+`;
+export const ChoiceInputGrid = styled.div`
+  display: grid;
+  height: 140px;
+  row-gap: 18px;
+  column-gap: 18px;
+  align-self: stretch;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+`;
+export const ChoiceButton = styled.button`
+  display: flex;
+  padding: 16px 27px;
+  align-items: center;
+  gap: 14px;
+  justify-self: stretch;
+  border-radius: 6px;
+  border: 2px solid #cbd2e0;
+  background: #fff;
+  :hover {
+    border: 2px solid #cbd2e0;
+    filter: brightness(0.9);
+  }
+`;
+export const ChoiceButtonText = styled.h3<{ color: string }>`
+  ${(props) => (props.color == 'blue' ? `color: #2962f6;` : `color: #1a202c;`)}
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 `;
 export const IDontKnow = styled.button`
   background: none;

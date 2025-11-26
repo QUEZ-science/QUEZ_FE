@@ -8,7 +8,7 @@ const Quiz: React.FC = () => {
     <_.Container>
       <Header />
       <_.Main>
-        <MainQuiz type="" />
+        <MainQuiz type="choice" />
       </_.Main>
     </_.Container>
   );

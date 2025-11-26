@@ -9,14 +9,36 @@ const MainQuiz: React.FC<mainQuizProps> = ({ type }) => {
   return (
     <_.Container>
       <_.QuizTitleDiv>
-        <_.QuizBlueText>Q1.</_.QuizBlueText>
-        <_.QuizBlackText>다음 원소의 이름을 쓰시오.</_.QuizBlackText>
+        <_.QuizText color="blue">Q1.</_.QuizText>
+        <_.QuizText color="black">다음 원소의 이름을 쓰시오.</_.QuizText>
       </_.QuizTitleDiv>
       <_.ContentArea>
         <_.ContentText>N</_.ContentText>
       </_.ContentArea>
       <_.answerInputDiv>
-        <_.answerInput />
+        {type == 'subjective' && <_.answerInput />}
+        {type == 'choice' && (
+          <_.ChoiceInputGrid>
+            <_.ChoiceButton>
+              <_.ChoiceButtonText color="blue">A</_.ChoiceButtonText>
+              <_.ChoiceButtonText color="black">질소</_.ChoiceButtonText>
+            </_.ChoiceButton>
+            <_.ChoiceButton>
+              <_.ChoiceButtonText color="blue">B</_.ChoiceButtonText>
+              <_.ChoiceButtonText color="black">마그네슘</_.ChoiceButtonText>
+            </_.ChoiceButton>
+            <_.ChoiceButton>
+              <_.ChoiceButtonText color="blue">C</_.ChoiceButtonText>
+              <_.ChoiceButtonText color="black">산소</_.ChoiceButtonText>
+            </_.ChoiceButton>
+            <_.ChoiceButton>
+              <_.ChoiceButtonText color="blue">D</_.ChoiceButtonText>
+              <_.ChoiceButtonText color="black">플루오린</_.ChoiceButtonText>
+            </_.ChoiceButton>
+          </_.ChoiceInputGrid>
+        )}
+        {type == 'OX'}
+
         <_.IDontKnow>모르겠어요</_.IDontKnow>
       </_.answerInputDiv>
     </_.Container>

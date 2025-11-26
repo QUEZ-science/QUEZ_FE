@@ -16,7 +16,9 @@ const MainQuiz: React.FC<mainQuizProps> = ({ type }) => {
         <_.ContentText>N</_.ContentText>
       </_.ContentArea>
       <_.answerInputDiv>
-        {type == 'subjective' && <_.answerInput />}
+        {type == 'subjective' && (
+          <_.answerInput placeholder="정답을 입력해주세요" />
+        )}
         {type == 'choice' && (
           <_.ChoiceInputGrid>
             <_.ChoiceButton>

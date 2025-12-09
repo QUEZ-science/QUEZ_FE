@@ -27,7 +27,11 @@ const QuizBlock = ({
         </_.header>
         <_.body>{body}</_.body>
       </_.Content>
-      <Button name="바로가기" type={active ? 'blue' : ''} onClick={onClick} />
+      <Button
+        name="바로가기"
+        type={active ? 'blue' : 'gray'}
+        onClick={onClick}
+      />
     </_.Container>
   );
 };

@@ -4,6 +4,7 @@ import IconBlue from '@/assets/QuizIconBlue.svg';
 import IconBlack from '@/assets/QuizIconBlack.svg';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
+import { useAlert } from '@/hooks/useAlert';
 
 interface quizBlockInterface {
   color: string;
@@ -22,11 +23,13 @@ const QuizBlock = ({
 }: quizBlockInterface) => {
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
+  const { warning } = useAlert();
+
   const onClickHandle = () => {
     if (isAuthenticated) {
       navigate(`/${onClick}`);
     } else {
-      console.log('로그인 ㄴㄴ');
+      warning('로그인 후 이용 가능합니다!', '로그인 필요');
     }
   };
 
